@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'Minnie';
+  src: url("../fonts/Minnie.eot");
+  src: url("/assets/fonts/Minnie.eot?#iefix") format("embedded-opentype"),
+      url('/assets/fonts/Minnie.woff2') format('woff2'),
+      url('/assets/fonts/Minnie.woff') format('woff'),
+      url('/assets/fonts/Minnie.ttf') format('truetype'),
+      url('/assets/fonts/Minnie.svg#Minnie') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f2f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  }
+.signup {
+  padding: 90px 75px;
+  background-color: #F4DCD6;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 30px;
+}
+.signup-heading {
+  font-family: Minnie;
+  font-size: 40px;
+  font-weight: bold;
+  color: #373941;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.signup-social {
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  border: 0;
+  background-color: #4c6ff4;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 5px 10px 0 rgba(76, 111, 244, 0.5);
+  }
+.signup-social-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: block;
+  margin: 0 auto;
+}
+.signup-or {
+  font-family: Minnie;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  margin: 55px auto;
+  position: relative;
+}
+.signup-or span {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #F4DCD6;
+  position: relative;
+  z-index: 2;
+}
+.signup-or:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.signup-label {
+  font-family: Minnie;
+  font-size: 16px;
+  color: #63676b;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+.signup-input-name{
+  display: block;
+  width: 100%;
+  padding: 25px;
+  border-radius: 14px;
+  background-color: #f2f3f5;
+  outline: none;
+  border: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.signup-input-phone{
+  display: block;
+  width: 100%;
+  padding: 25px;
+  border-radius: 14px;
+  background-color: #f2f3f5;
+  outline: none;
+  border: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.signup-input-pass{
+  display: block;
+  width: 100%;
+  padding: 25px;
+  border-radius: 14px;
+  background-color: #f2f3f5;
+  outline: none;
+  border: 0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.signup-input::-webkit-input-placeholder {
+  color: #b4bac0;
+  font-weight: 500;
+}
+.signup-input::-moz-input-placeholder {
+  color: #b4bac0;
+  font-weight: 500;
+}
+.signup-submit {
+  padding: 25px;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  display: inline-block;
+  width: 100%;
+  border-radius: 14px;
+  background-color:#f0b3b3;
+  box-shadow: 0 5px 10px 0 rgba(196, 54, 54, 0.5);
+  font-family: Minnie;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.signup-already{
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+.signup-login-link {
+  color: #FF5757;
+  text-decoration: none;
+}
