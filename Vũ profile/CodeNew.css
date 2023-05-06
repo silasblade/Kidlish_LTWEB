@@ -1,0 +1,38 @@
+ .box{    
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+  }
+.menu{
+    height: 6vh;
+    width: 100vw;
+    min-height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .menu li{
+    justify-content: center;
+    display: inline;
+    padding: 0 90px;
+    line-height: 50px;
+    padding-top: 0px;
+    padding-bottom: 22%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .menu li a{
+    font-weight: 900;
+    font-size: 450%;
+    font-family: Qx Latype;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: left;
+  }
+  .menu li a:hover{
+    color: cornflowerblue;
+  }
