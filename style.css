@@ -21,8 +21,8 @@ h1{
   margin: 0;
 }
 body{
-  width: 1423px;
-  height: 1000px;
+  width: fit-content;
+  height: fit-content;
   font-family: Minnie;
 }
 .header{
