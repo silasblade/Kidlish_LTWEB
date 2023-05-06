@@ -7,72 +7,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
     <link rel="stylesheet" href="speakchung.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
 </head>
 <body>
-    <div class="top">
-        <table>
-            <tr>
-                <td style="color:rgb(255, 51, 33);font-size: 60px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" ><strong>
-                    <img src="logo.png" style="height: 100px;width: 100px;"> KIDLISH
-                    </strong><br>
-                    <strong>English for kids</strong> 
-                </td>
-                <td style="font-size: 25px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
-                   <img src="email.png" >&ensp;&ensp; englishforkids@kidlish.edu.vn
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
                     <br>
-                    <img src="phone.png">&ensp;&ensp;1900 2211 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp; &ensp; &ensp; &ensp;
-                     <img style="width: 60px"; src="VietNam.webp">&ensp;&ensp;<img style="width: 60px;height: 40px; ;" src="British.png"></br>
-                    <br>
-                    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;    <button style="height: 55px;width: 55px;"><img src="search.png"></button>&ensp;&ensp; &ensp;&ensp;<a href ="login.html"><button><strong>LOG IN</strong></button></a>&ensp;&ensp;<a href="register.html"><button><strong>REGISTER</strong></button></a>
-                </td>
-            </tr>
-        </table>
-   </div>
-
-   <div class="mid">
-
-    &ensp;&ensp;&ensp;
-  <ul id="Main_menu">
-        &ensp; &ensp;<li><a href="layout.html"><button><strong>HOME</strong></button></a></li>
-        <li><a href=""><button><strong>LISTEN & WATCH</strong></button></a>
-            <ul class="sub-menu">
-                <li><a href="">Songs</a></li>
-                <li><a href="">Short stories</a></li>
-                <li><a href="">Poems</a></li>
-                <li><a href="">Video zone</a></li>
-            </ul>
-        </li>
-        <li><a href="sns.html"><button><strong>SPEAK & SPELL</strong></button></a>
-            <ul class="sub-menu">
-                <li><a href="">Sounds</a></li>
-                <li><a href="">Speak</a></li>
-                <li><a href="spell.html">Spell</a></li>
-                <li><a href="">Tricky words</a></li>
-            </ul>
-        </li>
-        <li><a href=""><button><strong>READ & WRITE</strong></button></a>
-            <ul class="sub-menu">
-                <li><a href="">Reading practice</a></li>
-                <li><a href="">Writing practice</a></li>
-                <li><a href="">Magazine</a></li>
-                <li><a href="">Topic</a></li>
-            </ul>
-        </li>
-        <li><a href=""><button><strong>FUN & GAMES</strong></button></a>
-            <ul class="sub-menu">
-                <li><a href="">Games</a></li>
-                <li><a href="">Joke</a></li>
-            </ul>
-        </li>
-        <li><a href=""><button><strong>VOCABULARY</strong></button></a>
-            <ul class="sub-menu">
-                <li><a href="">Flashcards</a></li>
-                <li><a href="">Worksheets</a></li>
-                <li><a href="">Word of the day</a></li>
-            </ul>
-        </li>
-   </ul>
-   </div>
+                    <a href ="/signin/signin.html"><button class="button" type="button"><i class="fa fa-sign-in" aria-hidden="true"></i> SIGN IN</button>
+                    <a href ="/signup/signup.html"><button class="button" type="button"><i class="fa fa-user-plus" aria-hidden="true"></i> SIGN UP</button>
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="/" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="/" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="/"class="button">Songs</a></li>
+                                <li><a href="/"class="button">Short Stories</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="/" class="button">Sound</a></li>
+                                <li><a href="/" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="/" class="button">Reading Practice</a></li>
+                                <li><a href="/" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="/" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="/" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="/" class="button">FlashCard</a></li>
+                                <li><a href="/" class="button">WordSheet</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
 
    <div class="speakchung">
     <h1 style="margin-left: 80px;">Easy conservation</h1>
