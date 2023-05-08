@@ -1,0 +1,441 @@
+deCSS * {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.container-myself {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 100px;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/map.jpg") no-repeat center;
+}
+
+.profile-card {
+  width: 500px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 10px #00000070;
+}
+
+.top-section {
+  padding: 60px 40px;
+  background: #23267a;
+}
+
+.message,
+.notif {
+  position: absolute;
+  top: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff50;
+}
+
+.message {
+  right: 40px;
+}
+
+.notif {
+  left: 40px;
+}
+
+.pic {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid #1cc93b;
+  border-radius: 50%;
+  padding: 8px;
+  position: relative;
+}
+
+.pic:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 1px solid #1cc93b;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  animation: wave 1.5s infinite linear;
+}
+
+@keyframes wave {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.name {
+  color: #f1f1f1;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.tag {
+  font-size: 18px;
+  color: #222;
+}
+
+.bottom-section {
+  background: #f1f1f1;
+  padding: 60px 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.border {
+  width: 1px;
+  height: 20px;
+  background: #bbb;
+  margin: 0 30px;
+}
+
+.bottom-section span {
+  font-size: 14px;
+  display: block;
+}
+
+.social-media {
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  left: 0;
+  z-index: 1;
+}
+
+.social-media i {
+  width: 60px;
+  height: 60px;
+  background: #0dd954;
+  border-radius: 50%;
+  color: #f1f1f1;
+  font-size: 20px;
+  line-height: 60px !important;
+  margin: 0 10px;
+  position: relative;
+}
+
+.social-media i:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ff6d51;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.4s linear;
+}
+
+.social-media i:hover:after {
+  transform: scale(1.4);
+  opacity: 0;
+}
+
+.sidenav {
+  height: 510px;
+  width: 200px;
+  background-color: #23267a;
+  overflow-x: hidden;
+  padding-top: 20px;
+  color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.sidenav .btn {
+  color: #f1f1f1;
+  background-color: #23267a;
+  margin-left: 50px;
+}
+
+.mails {
+  color: #f1f1f1;
+  background-color: #23267a;
+  height: 530px;
+  width: 320px;
+  padding-left: 8px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  display: inline;
+}
+
+td,
+th {
+  border: 1px solid #15d131;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f1f1;
+  color: #222;
+}
+
+.container-skills {
+  height: 500px;
+  width: 84vw;
+  background: url("./images/team.jpg") no-repeat center rgba(234, 240, 246, 0.6);
+  text-align: center;
+  padding: 100px;
+  font-family: "Courier New", monospace;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skills .title {
+  text-align: center;
+  margin: 0 auto;
+}
+.title h1 {
+  color: #4e31aa;
+}
+
+.wrapper h1 {
+  color: #f0a04b;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  z-index: -1;
+}
+
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card:hover .wrapper::after {
+  height: 120px;
+}
+
+.character {
+  width: 300px;
+  height: 250px;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 150px);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+html,
+body {
+  min-height: 100vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.slides {
+  display: inline;
+  padding: 0;
+  width: 609px;
+  height: 420px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  width: 609px;
+  height: 420px;
+  display: block;
+  position: absolute;
+
+  transform: scale(0);
+
+  transition: all 0.7s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav label {
+  width: 200px;
+  height: 100%;
+  display: none;
+  position: absolute;
+
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+
+  transition: opacity 0.2s;
+
+  color: #fff;
+  font-size: 156pt;
+  text-align: center;
+  line-height: 380px;
+  font-family: "Varela Round", sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label {
+  opacity: 0.5;
+}
+
+.nav label:hover {
+  opacity: 1;
+}
+
+.nav .next {
+  right: 0;
+}
+
+input:checked + .slide-container .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4 {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.slider {
+  height: 500px;
+  width: 100vw;
+  padding-top: 50px;
+  text-align: center;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+.slider h1 {
+  font-family: "Brush Script MT", cursive;
+}

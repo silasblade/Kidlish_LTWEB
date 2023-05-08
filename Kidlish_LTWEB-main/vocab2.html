@@ -1,0 +1,299 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="vocab.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+</head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</body>
+<h1 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: rgb(3, 103, 103);font-size: 50px;"> Foods</style=></h1>
+    
+        <h2 style="margin-left: 120px;font-size: 40px;">Action 1</h2>
+
+        <h3 style="margin-left: 120px;font-size: 30px;">Listen to the new words </h3>   
+        <style>
+            .image-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+            }
+            .image-container img {
+              margin: 10px;
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+            }
+          </style>
+          <div class="image-container">
+            <script>function playAudio()
+            { var audio = document.getElementById("myAudio");
+                audio.play();
+                }
+                </script>
+
+        <img src="https://sausageman.co.uk/wp-content/uploads/2019/03/hot-dogs-UK-wholesale-Vienna-beef-frankfurter.jpg" onclick="playAudio()" >
+        <audio id="myAudio"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/hot/hot_d/hot_dog_1_gb_1.mp3" type="audio/mp3"></audio>
+
+       
+                 <script>function playAudio1()
+            { var audio = document.getElementById("myAudio1");
+                audio.play();
+                }
+                </script>
+        <img src="vChicken.jpg" onclick="playAudio1()">
+        <audio id="myAudio1"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/c/chi/chick/chicken_fried_steak_1_gb_1.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio2()
+            { var audio = document.getElementById("myAudio2");
+                audio.play();
+                }
+                </script>
+        <img src="vPasta.jpg" onclick="playAudio2()">
+        <audio id="myAudio2"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pas/pasta/pasta__gb_2.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio3()
+            { var audio = document.getElementById("myAudio3");
+                audio.play();
+                }
+                </script>
+        <img src="vPizza.jpg"  onclick="playAudio3()">
+        <audio id="myAudio3"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/piz/pizza/pizza__gb_2.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio4()
+            { var audio = document.getElementById("myAudio4");
+                audio.play();
+                }
+                </script>
+        <img src="vPotato.jpg"onclick="playAudio4()"> 
+        <audio id="myAudio4"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pot/potat/potatochip_1_gb_1.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio5()
+            { var audio = document.getElementById("myAudio5");
+                audio.play();
+                }
+                </script>
+        <img src="vSandwich.jpg" onclick="playAudio5()">
+        <audio id="myAudio5"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/san/sandw/sandwich__gb_8.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio6()
+            { var audio = document.getElementById("myAudio6");
+                audio.play();
+                }
+                </script>
+        <img src="vHamburger.webp" onclick="playAudio6()">
+        <audio id="myAudio6"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/h/ham/hambu/hamburger__gb_1.mp3" type="audio/mp3"></audio>
+        
+        <script>function playAudio7()
+            { var audio = document.getElementById("myAudio7");
+                audio.play();
+                }
+                </script>
+        <img src="https://monngonmoingay.com/wp-content/uploads/2015/08/3.saladraucu2.png" onclick="playAudio7()">
+        <audio id="myAudio7"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sal/salad/salad__gb_2.mp3" type="audio/mp3"></audio>
+
+
+        <script>function playAudio8()
+            { var audio = document.getElementById("myAudio8");
+                audio.play();
+                }
+                </script>
+        <img src="https://www.piesandtacos.com/wp-content/uploads/2023/02/pastries-lemon-curd-mascarpone-5-scaled.jpg"onclick="playAudio8()">
+        <audio id="myAudio8"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/p/pas/pastr/pastry__gb_1.mp3" type="audio/mp3"></audio>
+
+
+        <script>function playAudio9()
+            { var audio = document.getElementById("myAudio9");
+                audio.play();
+                }
+                </script>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaboGr617JKGjCfhOcDLyTY56TrbEvXyDQdQ&usqp=CAUk"onclick="playAudio9()"> 
+        <audio id="myAudio9"><source src="https://www.oxfordlearnersdictionaries.com/media/english/uk_pron/s/sau/sausa/sausage__gb_1.mp3" type="audio/mp3"></audio>
+
+    
+    </div>
+    </style>
+    <br>
+    <br>
+    <h2 style="margin-left: 120px;font-size: 40px;">Action 2</h2>
+
+    <h3 style="margin-left: 120px;font-size: 30px;">Write and learn by heart </h3>   
+    
+    <table style="width: 70%;margin-left: 250px;font-size: 25px;font-family: Verdana, Geneva, Tahoma, sans-serif;border-spacing: 70px;">
+        <tr>
+            <td>Hot dog(n)</td>
+            <td>/ˈhɑːt dɔːɡ/:</td>
+            <td>bánh mỳ kẹp xúc xích</td>
+        </tr>
+        <tr>
+            <td>chicken-fried steak(n)</td>
+            <td>/ˌtʃɪkɪn ˌfraɪd ˈsteɪk/:</td>
+            <td>gà rán</td>
+        </tr>
+        <tr>
+            <td>Pasta(n)</td>
+            <td>/ˈpæstə/:</td>
+            <td>mì Ý </td>
+        </tr>
+        <tr>
+            <td>Pizza(n)</td>
+            <td>/’pi: tsə/:</td>
+            <td> bánh pi-za</td>
+        </tr>
+        <tr>
+            <td>French fries(n)</td>
+            <td>/frentʃ  frais/:</td>
+            <td>khoai tây chiên </td>
+        </tr>
+        <tr>
+            <td>Sandwich(n)</td>
+            <td>/ˈsænwɪtʃ/:</td>
+            <td>bánh mỳ kẹp</td>
+        </tr>
+        <tr>
+            <td> Hamburger(n)</td>
+            <td>/’hæmbɝːgə(r)/:</td>
+            <td>bánh kẹp</td>
+        </tr>
+        <tr>
+            <td>Salad(n) </td>
+            <td>/ˈsæləd/:</td>
+            <td> rau trộn</td>
+        </tr>
+        <tr>
+            <td>Pastry(n)</td>
+            <td>/ˈpeɪstri/:</td>
+            <td>bánh ngọt</td>
+        </tr>
+        <tr>
+            <td>Sausage(n)</td>
+            <td>/ˈsɒsɪdʒ/:</td>
+            <td>xúc xích</td>
+        </tr>
+    
+    </table>
+    <h2 style="margin-left: 120px;font-size: 40px;">Action 𝟛</h2>
+
+    <h3 style="margin-left: 120px;font-size: 30px;">Let review your words by watching video </h3> 
+
+    <iframe width="900" height="500" style="margin-left: 300px;" src="https://www.youtube.com/embed/_uLesn8M1IM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+
+</html>

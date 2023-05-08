@@ -1,0 +1,156 @@
+body{
+    background-color: #F4DCD6;
+}
+.title{
+    font-family: Minnie;
+    font-size: 40px;
+    font-weight: bold;
+    color: #373941;
+    text-align: center;
+    margin-bottom: 35px;
+    
+}
+.infor{
+    display:inline-flex;
+}
+.parentinfor{
+    width: 500px;
+    align-items: baseline;
+    padding: 20px 20px;
+    background-color:white;
+    border-radius: 30px;
+    margin-left: 150px;
+}
+
+.parentinfor2{
+  height: 420px;
+  width: 500px;
+  align-items: baseline;
+  padding: 20px 20px;
+  background-color:white;
+  border-radius: 30px;
+  margin-left: 500px;
+}
+.parentinfor3{
+  height: fit-content;
+  width: 1100px;
+  align-items: baseline;
+  padding: 20px 20px;
+  background-color:white;
+  border-radius: 30px;
+  margin: auto;
+  padding-left: -130px;
+}
+
+.parentinfor4{
+  width: 900px;
+  align-items: baseline;
+  padding: 20px 20px;
+  background-color:white;
+  border-radius: 30px;
+  margin: auto;
+  padding-left: -130px;
+}
+
+
+.multichoice{
+  width: 1000px;
+  align-items: baseline;
+  padding: 20px 20px;
+  background-color:white;
+  border-radius: 30px;
+  margin-left: 150px;
+}
+.time{
+  position: fixed;
+  font-size: 30px;
+  align-items: baseline;
+  padding: 20px 20px;
+  background-color:white;
+  border-radius: 30px;
+  margin-left: 1200px;
+  height: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.childreninfor{
+    height: 350px;
+    width: 500px;
+    align-items: baseline;
+    padding: 20px 20px;
+    background-color:white;
+    border-radius: 30px;
+}
+.label {
+    font-family: Minnie;
+    font-size: 16px;
+    color: #63676b;
+    font-weight: 500;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .form{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 14px;
+    background-color: #f2f3f5;
+    outline: none;
+    border: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    margin:  auto;
+    margin-bottom: 30px;
+  }
+  .button1{
+    padding: 5px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 10%;
+    border-radius: 14px;
+    background-color:#f0b3b3;
+    font-family: Minnie;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .button2{
+    padding: 5px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 10%;
+    border-radius: 14px;
+    background-color:#f0b3b3;
+    font-family: Minnie;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .buttonbuy{
+    padding: 5px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    border-radius: 14px;
+    background-color:#f0b3b3;
+    font-family: Minnie;
+    cursor: pointer;
+    margin-left: 120px;
+  }
+  .button3{
+    padding: 5px;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 10%;
+    border-radius: 14px;
+    background-color:#f0b3b3;
+    font-family: Minnie;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 370px;
+  }

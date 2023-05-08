@@ -1,0 +1,149 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="speak.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="/signin/signin2.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<div>
+<br>
+<br>
+<br>
+<br>
+    <div class="div_left2"><h1 style="color: rgb(14, 14, 88);font-size: 40px;">Write: Perfect score<br><br></h1>
+    <p style="font-size: 20px;"> "Have you ever made a mistake?" or "Have you ever messed up?"<br><br></p>
+    <p style="font-size: 20px;">Write a short paragraph about a time when you made a mistake or experienced a failure. How did you feel when it happened? What did you learn from the experience? Did you try again or give up? Share your reflections on the situation and how you overcame it, if at all.<br><br></p>
+    <p style="font-size: 20px;"> <br><br></p>
+    <p style="font-size: 20px;"> <img src="assets/picture/learn-mistake.gif">  <br><br></p>
+    <div style="text-align: end;">
+    <form>
+        <p style="font-size: 20px; margin-left: 380px; font-family: Arial, Helvetica, sans-serif;">Let write a paragraph about your thinks and submit it for me!<br><br></p>
+        <textarea id="message" name="message" rows="15" cols="120" style="resize: none;"></textarea>
+        <br>
+        <input class="signin-submit2" type="submit" value="Submit">
+      </form>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+        
+   

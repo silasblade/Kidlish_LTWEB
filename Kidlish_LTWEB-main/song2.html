@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="speakchung.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+</head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+   <div class="speakchung">
+    <h1>  Feelings are feelings  </h1>
+    <iframe width="600" height="400" src="https://www.youtube.com/embed/UuNrP4Q_y9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></body>
+    <br>
+    <a href="song1.html"><img style="width: 80px;height: 80px;" src="muitentr.svg"> </a>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <a href="songs.html"><img style="width: 80px;height: 80px;" src="house.svg">   </a>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <a href="song3.html"><img style="width: 80px;height: 80px;" src="muitenph.svg"> </a>
+</div>
+
+</body>
+</html>
+

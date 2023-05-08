@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="arti2.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+</head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+ <div  class="arti2"><br>
+<a href="articles.html"><h1 style="font-size: 40px;margin-left: 350px;margin-right: 350px;margin-top: 50px;color: rgb(214, 195, 98);" > The Importance of Being Kind to Others</h1></a>
+<p style="font-size: 22px;margin-left: 100px;margin-right: 100px;margin-top: 25px;color: rgb(224, 229, 183);font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: justify;">
+   Hello there, my little friends! Today, I want to talk to you about a very important topic – kindness. You may have heard the word before, but do you know what it means?
+<br><br>
+Kindness is when we treat others with love, respect, and compassion. It's when we go out of our way to do something nice for someone else without expecting anything in return.
+<br><br>
+
+Why is kindness important? Well, there are many reasons! First of all, being kind to others can make them feel happy and loved. When we show kindness, we are spreading positive energy around us. And when others feel good, it makes us feel good too!
+<br><br>
+
+Secondly, being kind can also help us build strong relationships with others. When we treat others with kindness, they are more likely to want to be friends with us and spend time with us. This can help us form lasting friendships that are based on love and trust.
+<br><br>
+
+But being kind isn't just good for other people – it's also good for us! When we are kind to others, we feel a sense of pride and self-worth. We know that we have done something good for someone else, and that makes us feel good about ourselves.
+<br><br>
+
+So, how can we be kind to others? There are many ways! We can: Smile at someone and say "hello";
+; Hold the door open for someone
+; Share our toys with others
+; Help someone who is struggling with something
+; Give someone a compliment
+; Say "thank you" when someone does something nice for us
+; These may seem like small things, but they can make a big difference in someone's day!
+
+In conclusion, kindness is a very important trait to have. When we are kind to others, we are spreading love and positivity in the world. So, let's all try to be a little kinder to others each day. It doesn't take much, but it can make a big difference!</p>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="vocab.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+</head>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</body>
+<h1 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: rgb(3, 103, 103);font-size: 50px;"> Animals</style=></h1>
+    
+        <h2 style="margin-left: 120px;font-size: 40px;">Action 1</h2>
+
+        <h3 style="margin-left: 120px;font-size: 30px;">Listen to the new words </h3>   
+        <style>
+            .image-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+            }
+            .image-container img {
+              margin: 10px;
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+            }
+          </style>
+          <div class="image-container">
+            <script>function playAudio()
+            { var audio = document.getElementById("myAudio");
+                audio.play();
+                }
+                </script>
+
+        <img src="https://salt.tikicdn.com/cache/w300/ts/product/e7/cd/0a/4056aa3e04fd5fd09f4a2a347c2db69e.jpg" onclick="playAudio()" >
+        <audio id="myAudio"><source src="/speak/frog.mp3" type="audio/mp3"></audio>
+
+       
+                 <script>function playAudio1()
+            { var audio = document.getElementById("myAudio1");
+                audio.play();
+                }
+                </script>
+        <img src="https://th.bing.com/th/id/OIP.MiU0fj7lKGnfulCXF9wPTwAAAA?pid=ImgDet&w=161&h=161&c=7&dpr=1.5" onclick="playAudio1()">
+        <audio id="myAudio1"><source src="/speak/giraffe.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio2()
+            { var audio = document.getElementById("myAudio2");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20190401/ourlarge/pngtree-cartoon-branch-monkey-png-image_903541.jpg" onclick="playAudio2()">
+        <audio id="myAudio2"><source src="/speak/monkey.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio3()
+            { var audio = document.getElementById("myAudio3");
+                audio.play();
+                }
+                </script>
+        <img src="https://dayve.vn/wp-content/uploads/2022/09/ve-con-chim-buoc-9.jpg"  onclick="playAudio3()">
+        <audio id="myAudio3"><source src="/speak/bird.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio4()
+            { var audio = document.getElementById("myAudio4");
+                audio.play();
+                }
+                </script>
+        <img src="https://media.istockphoto.com/id/1341799575/vi/vec-to/phim-ho%E1%BA%A1t-h%C3%ACnh-h%C3%A0i-h%C6%B0%E1%BB%9Bc-con-ng%E1%BB%B1a-ch%E1%BA%A1y-tr%C3%AAn-n%E1%BB%81n-tr%E1%BA%AFng.jpg?s=612x612&w=0&k=20&c=bZEfxE1WoNoLdW-ey5C2RuzZKhK7lxiObhgExnE5mT8="onclick="playAudio4()"> 
+        <audio id="myAudio4"><source src="/speak/horse.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio5()
+            { var audio = document.getElementById("myAudio5");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20201224/ourlarge/pngtree-animal-avatar-cute-cartoon-small-fresh-simple-cute-rabbit-holding-carrot-png-image_2602591.jpg" onclick="playAudio5()">
+        <audio id="myAudio5"><source src="/speak/rabbit.mp3" type="audio/mp3"></audio>
+
+        <script>function playAudio6()
+            { var audio = document.getElementById("myAudio6");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20221030/ourlarge/pngtree-cartoon-snake-png-image_6402829.png" onclick="playAudio6()">
+        <audio id="myAudio6"><source src="/speak/snake.mp3" type="audio/mp3"></audio>
+        
+        <script>function playAudio7()
+            { var audio = document.getElementById("myAudio7");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20201104/ourlarge/pngtree-cartoon-cute-style-orange-clipart-sleeping-little-tiger-png-image_2388466.jpg" onclick="playAudio7()">
+        <audio id="myAudio7"><source src="/speak/tiger.mp3" type="audio/mp3"></audio>
+
+
+        <script>function playAudio8()
+            { var audio = document.getElementById("myAudio8");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20201011/ourlarge/pngtree-hand-drawn-cartoon-fox-clipart-png-image_2362815.jpg"onclick="playAudio8()">
+        <audio id="myAudio8"><source src="/speak/fox.mp3" type="audio/mp3"></audio>
+
+
+        <script>function playAudio9()
+            { var audio = document.getElementById("myAudio9");
+                audio.play();
+                }
+                </script>
+        <img src="https://png.pngtree.com/png-clipart/20201020/ourlarge/pngtree-hand-drawn-cartoon-gray-elephant-clipart-png-image_2370105.jpg"onclick="playAudio9()"> 
+        <audio id="myAudio9"><source src="/speak/elephant.mp3" type="audio/mp3"></audio>
+
+    
+    </div>
+    </style>
+    <br>
+    <br>
+    <h2 style="margin-left: 120px;font-size: 40px;">Action 2</h2>
+
+    <h3 style="margin-left: 120px;font-size: 30px;">Write and learn by heart </h3>   
+    
+    <table style="width: 70%;margin-left: 250px;font-size: 25px;font-family: Verdana, Geneva, Tahoma, sans-serif;border-spacing: 70px;">
+        <tr>
+            <td>Frog(n)</td>
+            <td>/frɒɡ/:</td>
+            <td>con ếch</td>
+        </tr>
+        <tr>
+            <td>Bird(n)</td>
+            <td>/bɜːrd/:</td>
+            <td>con chim</td>
+        </tr>
+        <tr>
+            <td>Monkey(n)</td>
+            <td>/ˈmʌŋki/:</td>
+            <td>con khỉ</td>
+        </tr>
+        <tr>
+            <td>Rabbit(n)</td>
+            <td>/ˈræbɪt/:</td>
+            <td>con thỏ</td>
+        </tr>
+        <tr>
+            <td>Snake(n)</td>
+            <td>/sneɪk/:</td>
+            <td>con rắn</td>
+        </tr>
+        <tr>
+            <td>Tiger(n)</td>
+            <td>/ˈtaɪɡər/:</td>
+            <td>con </td>
+        </tr>
+        <tr>
+            <td>Fox(n)</td>
+            <td>/fɑːks/:</td>
+            <td>con cáo</td>
+        </tr>
+        <tr>
+            <td>Elephant(n) </td>
+            <td>/ˈelɪfənt/:</td>
+            <td>con voi</td>
+        </tr>
+        <tr>
+            <td>Horse(n)</td>
+            <td>/hɔːrs/:</td>
+            <td>con ngựa</td>
+        </tr>
+        <tr>
+            <td>Giraffe(n)</td>
+            <td>/dʒəˈræf/:</td>
+            <td>con huơu cao cổ</td>
+        </tr>
+    
+    </table>
+    <h2 style="margin-left: 120px;font-size: 40px;">Action 𝟛</h2>
+
+    <h3 style="margin-left: 120px;font-size: 30px;">Let review your words by watching video </h3> 
+
+    <iframe width="900" height="500" style="margin-left: 300px;" src="https://www.youtube.com/embed/YXZvjhp2qOs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+
+</html>

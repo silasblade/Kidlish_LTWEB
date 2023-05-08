@@ -1,0 +1,196 @@
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+    <link rel="stylesheet" href="speak.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+    $.ajax({
+        url: "get_data3.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data){
+            $("#result").html("");
+            $.each(data, function(index, value){
+                var fullname = value.fullname_user;
+                var words = fullname.split(" ");
+                var lastTwoWords = words.slice(-2).join(" ");
+                $("#result").append("<div>" + lastTwoWords + "</div>");
+            });
+        },
+        error: function(){
+            alert("Lỗi truy vấn dữ liệu");
+        }
+    });
+});
+
+	</script>
+</head>
+<body>
+    <div class="header">
+        <div class="content">
+            <div class="logo left">
+                <img src="/assets/picture/logo.png" alt="Logo"/>
+                <div class="name">
+                    <span style="padding-left: 60px; font-family: Minnie;"><strong>KIDLISH</strong></span> 
+                    <p style="font-family: Minnie;">English for kids</p>
+                </div>
+            </div>
+            <div class="logo right">
+                <div class="contact">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    englishforkids@kidlish.edu.vn
+                </div>
+                <div class="contact">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                     1900 2211
+                </div>
+                <div class="btnSigns">
+                    <br>
+                    <a href ="ihtml.php"><button class="button" type="button"> <div id="result"></div> </button>
+
+                        <button class="button" type="button" onclick="deleteCookie()">LOG OUT</button>
+
+                        <script>
+                        function deleteCookie() {
+                            document.cookie = "user_id=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        }
+                        </script>
+            
+                </div>
+            </div>
+        </div>
+        <div class="navigation">
+            <nav>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="active"><a href="afterlogin.html" class="button"><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                        <li><a href="lnw.html" class="button"><i class="fa fa-headphones" aria-hidden="true"></i> LISTEN ~ WATCH</a>
+                            <ul id="submenu">
+                                <ul>
+                                <li><a href="songs.html"class="button">Songs</a></li>
+                                <li><a href="animations.html"class="button">Animations</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="sns.html" class="button"><i class="fa fa-comments-o" aria-hidden="true"></i> SPEAK ~ SPELL</a>
+                            <ul id="submenu1">
+                                <ul>
+                                <li><a href="speak.html" class="button">Speak</a></li>
+                                <li><a href="spell.html" class="button">Spell</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="rnw.html" class="button"><i class="fa fa-pencil" aria-hidden="true"></i> READ ~ WRITE</a>
+                            <ul id="submenu2">
+                                <ul>
+                                <li><a href="read.html" class="button">Reading Practice</a></li>
+                                <li><a href="write.html" class="button">Writing Practice</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="userPage.php" class="button"><i class="fa fa-gamepad" aria-hidden="true"></i> FUN ~ GAMES</a>
+                            <ul id="submenu3">
+                                <ul>
+                                <li><a href="userPage" class="button">Games</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><a href="vocabchung.html" class="button"><i class="fa fa-book" aria-hidden="true"></i> VOCABULARY</a>
+                            <ul id="submenu4">
+                                <ul>
+                                <li><a href="vocab.html" class="button">Lesson 1</a></li>
+                                <li><a href="vocab1.html" class="button">Lesson 2</a></li>
+                                <li><a href="vocab2.html" class="button">Lesson 3</a></li>
+                                <li><a href="vocab3.html" class="button">Lesson 4</a></li>
+                                </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<div class="container_swap">
+
+    <div class="div_left"><h1 style="color: rgb(14, 14, 88);font-size: 40px;">Culture<br><br></h1>
+    <p style="font-size: 20px;">Do you like discovering culture in English? Reading posts is a great way to get better at reading English and we have lots of great news for you to enjoy. Listen to songs, print activities and post comments!<br><br><br></p>
+        
+        <div class="div_left1">
+        <a href="cul1.html"><img style="width:400px;height:300px;border-bottom-left-radius: 70px;" src="https://cdn.thuvienphapluat.vn/uploads/khoinghiep/uploads/images/2019/01/17/uhigewwjkk.jpg" ></a>
+        </div>
+        
+        <div class="div_right1">
+            <br> <h1 style="margin-left: 40px;"><a  style="text-decoration: none;color: rgb(188, 19, 19);" href="cul1.html">"Tết" in Viet Nam </a></h1>
+            <br><p style="margin-left: 40px;">Practice your reading skill with this post!
+                </p></div>
+        </div>
+
+       
+    </div>
+    
+    <div class="div_right">
+        <div class = "box">
+            
+               
+                <a href="articles.html" style="text-decoration: none;"><p>ARTICLES</p></a>
+                <br>
+                <a href="shortstories.html" style="text-decoration: none;"><p>SHORT STORIES</p></a>
+                <br>
+                <a href="culture.html" style="text-decoration: none;"><p>CULTURE</p></a>
+
+        </div>    
+    </div>
+</div>
+
+<div class="co1">
+
+    <div class="l1">
+        
+        <div class="le1">
+        <a href="cul2.html"><img style="width:400px;height:300px;border-bottom-left-radius: 70px;" src="https://hips.hearstapps.com/hmg-prod/images/interior-christmas-magic-glowing-tree-fireplace-royalty-free-image-1628537941.jpg" ></a>
+        </div>
+        
+        <div class="ri1">
+            <br> <h1 style="margin-left: 40px;"><a  style="text-decoration: none;color: rgb(188, 19, 19);" href="cul2.html">Christmas</a></h1>
+            <br><p style="margin-left: 40px;">
+                Practice your reading skill with this post!</p></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="co2">
+
+    <div class="l2">
+        
+        <div class="le2">
+        <a href="cul3.html"><img style="width:400px;height:300px;border-bottom-left-radius: 70px;" src="https://bizweb.dktcdn.net/100/307/286/articles/easter-chocolate.jpg?v=1679892684863
+            " ></a>
+        </div>
+        
+        <div class="ri2">
+            <br> <h1 style="margin-left: 40px;"><a  style="text-decoration: none;color: rgb(188, 19, 19);" href="cul3.html">Easter </a></h1>
+            <br><p style="margin-left: 40px;">Practice your reading skill with this post!
+                </p></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>
+
